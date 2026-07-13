@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HERBORISTERIE TOUBA | معشبة طوبى</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="top-bar">
+
+<div class="logo">
+
+<h2>🌿 HERBORISTERIE TOUBA</h2>
+
+<p>Marrakech • Maroc</p>
+
+</div>
+
+<div class="header-icons">
+
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank" class="instagram">
+
+📷 Instagram
+
+</a>
+
+<a href="https://wa.me/212711088984" target="_blank" class="whatsapp">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="#">الرئيسية</a>
+
+<a href="#categories">الأقسام</a>
+
+<a href="#products">المنتجات</a>
+
+<a href="#contact">اتصل بنا</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>
+
+منتجات طبيعية أصلية من معشبة طوبى
+
+</h1>
+
+<p>
+
+زيوت طبيعية • أعشاب • كريمات • منتجات تجميل
+
+</p>
+
+<a href="#categories" class="shop-btn">
+
+ابدأ التسوق
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section id="categories" class="categories">
+
+<h2>
+
+اختر القسم
+
+</h2>
+
+<div class="categories-row">
