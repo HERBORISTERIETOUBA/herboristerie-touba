@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERBORISTERIE TOUBA</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#f7f5ed;
+      color:#333;
+    }
+
+    header{
+      background:#1b5e20;
+      color:white;
+      padding:15px;
+      text-align:center;
+      font-size:28px;
+      font-weight:bold;
+      position:sticky;
+      top:0;
+    }
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url("https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1200&q=80");
+      background-size:cover;
+      background-position:center;
+      height:320px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:40px;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,.1);
+      padding:20px;
+      text-align:center;
+    }
+
+    .card img{
+      width:100%;
+      border-radius:10px;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin:15px 0;
+      color:#1b5e20;
+    }
+
+    .price{
+      color:#e67e22;
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#1b5e20;
+      color:white;
+      padding:12px 25px;
+      text-decoration:none;
+      border-radius:30px;
+    }
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+HERBORISTERIE TOUBA
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Produits Naturels de Haute Qualité</h1>
+    <p>Livraison partout au Maroc</p>
+  </div>
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80">
+<h3>Huile de Nigelle</h3>
+<p class="price">80 MAD</p>
+<a class="btn" href="https://wa.me/212711088984">Commander</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80">
+<h3>Crème Naturelle</h3>
+<p class="price">65 MAD</p>
+<a class="btn" href="https://wa.me/212711088984">Commander</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=600&q=80">
+<h3>Plantes Médicinales</h3>
+<p class="price">À partir de 25 MAD</p>
+<a class="btn" href="https://wa.me/212711088984">Commander</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 HERBORISTERIE TOUBA
+</footer>
+
+</body>
+</html>
