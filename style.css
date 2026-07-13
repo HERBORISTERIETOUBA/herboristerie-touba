@@ -1,0 +1,267 @@
+</div>
+
+<section class="about">
+
+<div class="about-box">
+
+<h2>لماذا تختار معشبة طوبى؟</h2>
+
+<p>
+نقدم منتجات طبيعية أصلية مختارة بعناية، مع جودة عالية وأسعار مناسبة،
+وتوصيل إلى جميع مدن المغرب.
+</p>
+
+<div class="features">
+
+<div class="feature">
+🌿
+<h3>100% طبيعي</h3>
+<p>منتجات أصلية بدون إضافات.</p>
+</div>
+
+<div class="feature">
+🚚
+<h3>توصيل سريع</h3>
+<p>التوصيل إلى جميع المدن المغربية.</p>
+</div>
+
+<div class="feature">
+💬
+<h3>دعم مباشر</h3>
+<p>اطلب عبر واتساب في أي وقت.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<h2>HERBORISTERIE TOUBA</h2>
+
+<p>📍 مراكش - المغرب</p>
+
+<p>📱 WhatsApp :
+<a href="https://wa.me/212711088984" target="_blank">
++212 711 088 984
+</a>
+</p>
+
+<p>
+📷 Instagram :
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank">
+@herboristerie_touba
+</a>
+</p>
+
+<p>
+© 2026 HERBORISTERIE TOUBA
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+/*=========================
+    CATEGORIES
+=========================*/
+
+.categories{
+max-width:1200px;
+margin:70px auto;
+padding:20px;
+}
+
+.categories h2{
+text-align:center;
+font-size:38px;
+color:#1b5e20;
+margin-bottom:40px;
+}
+
+.categories-row{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.category-card{
+width:240px;
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+cursor:pointer;
+transition:.35s;
+}
+
+.category-card:hover{
+transform:translateY(-10px);
+}
+
+.category-card.active
+/*=========================
+      ABOUT
+=========================*/
+
+.about{
+background:#f1eee7;
+padding:80px 20px;
+}
+
+.about-box{
+max-width:1200px;
+margin:auto;
+text-align:center;
+}
+
+.about-box h2{
+font-size:40px;
+color:#1b5e20;
+margin-bottom:20px;
+}
+
+.about-box p{
+font-size:18px;
+color:#555;
+max-width:800px;
+margin:0 auto 50px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.feature{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+}
+
+.feature{
+font-size:18px;
+}
+
+.feature h3{
+font-size:24px;
+color:#1b5e20;
+margin:15px 0;
+}
+
+/*=========================
+      FOOTER
+=========================*/
+
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+footer h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+footer p{
+margin:10px 0;
+font-size:18px;
+}
+
+footer a{
+color:#FFD54F;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:768px){
+
+.logo h2{
+font-size:22px;
+}
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+
+.overlay h1{
+font-size:34px;
+}
+
+.overlay p{
+font-size:18px;
+}
+
+.categories-row{
+flex-direction:column;
+align-items:center;
+}
+
+.category-card{
+width:95%;
+max-width:350px;
+}
+
+.section-title,
+.categories h2,
+.about-box h2{
+font-size:30px;
+}
+
+.header-icons{
+margin-top:15px;
+justify-content:center;
+width:100%;
+}
+
+.top-bar{
+justify-content:center;
+text-align:center;
+}
+
+.shop-btn{
+font-size:18px;
+padding:12px 28px;
+}
+
+}
+
+/*=========================
+      SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#1b5e20;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+background:#ece7dc;
+}
