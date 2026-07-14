@@ -65,7 +65,7 @@ color:#1f6b3b;
 
 .hero{
 margin-top:80px;
-height:420px;
+height:520px;
 background:url("banner.png") center/cover no-repeat;
 display:flex;
 justify-content:center;
@@ -140,7 +140,7 @@ margin-bottom:30px;
 }
 
 .card{
-height:260px;
+height:300px;
 border-radius:20px;
 overflow:hidden;
 position:relative;
@@ -154,9 +154,20 @@ object-fit:cover;
 transition:.4s;
 }
 
-.card:hover img,
+.card,
+.big-card{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.card:hover,
 .big-card:hover{
-transform:scale(1.05);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.card:hover img,
+.big-card:hover img{
+    transform:scale(1.08);
 }
 
 .cover{
@@ -254,8 +265,8 @@ background:#1ebe5d;
 <div class="container nav">
 
 <div class="logo">
-    <img src="Picsart_26-07-13_03-03-07-962.png" alt="Logo" style="height:50px;vertical-align:middle;margin-right:10px;">
-    HERBORISTERIE TOUBA
+    <img src="Picsart_26-07-13_03-03-07-962.png" alt="Logo" style="height:65px;vertical-align:middle;margin-right:12px;"
+    <span style="font-size:24px;">HERBORISTERIE TOUBA</span>
 </div>
 
 <div class="menu">
@@ -436,7 +447,7 @@ Produits naturels • Livraison partout au Maroc
 
 </footer>
 <a href="https://wa.me/212711088984" class="whatsapp" target="_blank">
-📱
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:36px;height:36px;">
 </a>
 </body>
 </html>
