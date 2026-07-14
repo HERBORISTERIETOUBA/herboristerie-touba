@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,9 +29,9 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:white;
+background:#fff;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-z-index:999;
+z-index:1000;
 }
 
 .container{
@@ -54,13 +55,14 @@ color:#1f6b3b;
 
 .menu{
 display:flex;
-gap:20px;
+gap:25px;
 }
 
 .menu a{
 text-decoration:none;
-color:#333;
 font-weight:bold;
+color:#333;
+transition:.3s;
 }
 
 .menu a:hover{
@@ -70,7 +72,10 @@ color:#1f6b3b;
 .hero{
 margin-top:80px;
 height:420px;
-background:url("banner.png") center center/cover no-repeat;
+background-image:url("banner.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -84,15 +89,15 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 }
 
 .hero-content{
 color:white;
-padding:20px;
 }
 
 .hero-content h1{
-font-size:52px;
+font-size:50px;
 margin-bottom:15px;
 }
 
@@ -102,13 +107,14 @@ margin-bottom:30px;
 }
 
 .btn{
-background:#1f6b3b;
-padding:14px 35px;
-border-radius:40px;
-text-decoration:none;
-color:white;
-font-weight:bold;
 display:inline-block;
+padding:15px 40px;
+background:#1f6b3b;
+color:white;
+text-decoration:none;
+border-radius:35px;
+font-weight:bold;
+transition:.3s;
 }
 
 .btn:hover{
@@ -116,97 +122,87 @@ background:#14532d;
 }
 
 section{
-padding:70px 0;
+padding:80px 0;
 }
 
 .title{
-font-size:38px;
 text-align:center;
+font-size:40px;
 color:#1f6b3b;
 margin-bottom:40px;
-}
-
-.category-menu{
+  .category-menu{
 display:flex;
-gap:15px;
-overflow-x:auto;
-padding-bottom:20px;
-margin-bottom:35px;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:18px;
+margin-top:20px;
+margin-bottom:50px;
 }
 
-.category-menu::-webkit-scrollbar{
-display:none;
-}
-
-.category-menu button{
-border:none;
+.category-menu a{
 background:#1f6b3b;
 color:white;
-padding:12px 28px;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-white-space:nowrap;
+text-decoration:none;
+padding:15px 28px;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
 transition:.3s;
 }
 
-.category-menu button:hover,
-.category-menu button.active{
+.category-menu a:hover{
 background:#14532d;
+transform:translateY(-4px);
 }
 
-.products-grid{
+.categories-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.product{
+.category-card{
 background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
 transition:.3s;
 }
 
-.product:hover{
+.category-card:hover{
 transform:translateY(-8px);
 }
 
-.product img{
-width:100%;
-height:220px;
-object-fit:cover;
+.category-card .icon{
+font-size:55px;
+margin-bottom:15px;
 }
 
-.product-info{
-padding:20px;
-text-align:center;
-}
-
-.product-info h3{
-margin-bottom:10px;
+.category-card h3{
 color:#1f6b3b;
+margin-bottom:10px;
+font-size:24px;
 }
 
-.price{
-font-size:20px;
-font-weight:bold;
-margin-bottom:18px;
+.category-card p{
+margin-bottom:25px;
+line-height:1.6;
 }
 
 footer{
 background:#14532d;
 color:white;
-padding:40px;
 text-align:center;
+padding:40px;
 margin-top:60px;
 }
 
 @media(max-width:768px){
 
 .hero{
-height:300px;
+height:320px;
 }
 
 .hero-content h1{
@@ -214,11 +210,25 @@ font-size:32px;
 }
 
 .hero-content p{
-font-size:16px;
+font-size:17px;
 }
 
 .menu{
 display:none;
+}
+
+.logo{
+font-size:22px;
+}
+
+.category-menu{
+overflow-x:auto;
+justify-content:flex-start;
+padding-bottom:10px;
+}
+
+.category-menu a{
+white-space:nowrap;
 }
 
 }
@@ -238,8 +248,8 @@ display:none;
 </div>
 
 <div class="menu">
-<a href="#">Accueil</a>
-<a href="#produits">Produits</a>
+<a href="index.html">Accueil</a>
+<a href="huiles.html">Produits</a>
 <a href="#">À propos</a>
 <a href="#">Contact</a>
 </div>
@@ -247,93 +257,124 @@ display:none;
 </div>
 
 </header>
+
 <section class="hero">
+
 <div class="overlay">
+
 <div class="hero-content">
+
 <h1>Bienvenue chez HERBORISTERIE TOUBA</h1>
+
 <p>Les meilleurs produits naturels pour votre santé et votre beauté.</p>
-<a class="btn" href="#produits">Découvrir</a>
+
+<a href="#categories" class="btn">Découvrir</a>
+
 </div>
+
 </div>
+
 </section>
 
-<section id="produits">
+<section id="categories">
 
 <div class="container">
 
-<h2 class="title">Nos Produits</h2>
+<h2 class="title">🌿 Nos Catégories</h2>
 
 <div class="category-menu">
 
-<button class="active" onclick="filterProducts('all',this)">Tous</button>
+<a href="huiles.html">🫒 Huiles</a>
 
-<button onclick="filterProducts('huile',this)">Huiles</button>
+<a href="cremes.html">🧴 Crèmes</a>
 
-<button onclick="filterProducts('creme',this)">Crèmes</button>
+<a href="plantes.html">🌿 Plantes</a>
 
-<button onclick="filterProducts('plante',this)">Plantes</button>
+<a href="cosmetiques.html">🌸 Cosmétiques</a>
 
-<button onclick="filterProducts('cosmetique',this)">Cosmétiques</button>
+<a href="produits.html">🏪 Tous</a>
 
 </div>
 
-<div class="products-grid">
+<div class="categories-grid">
 
-<div class="product huile">
-<img src="https://picsum.photos/400/300?1">
-<div class="product-info">
-<h3>Huile Anti Chute</h3>
-<p class="price">99 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
-</div>
-</div>
+<div class="category-card">
 
-<div class="product huile">
-<img src="https://picsum.photos/400/300?2">
-<div class="product-info">
-<h3>Huile de Nigelle</h3>
-<p class="price">80 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
-</div>
+<div class="icon">🫒</div>
+
+<h3>Huiles</h3>
+
+<p>Découvrez nos huiles naturelles de haute qualité.</p>
+
+<a class="btn" href="huiles.html">Voir</a>
+
 </div>
 
-<div class="product huile">
-<img src="https://picsum.photos/400/300?3">
-<div class="product-info">
-<h3>Huile d'Argan</h3>
-<p class="price">120 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
+<div class="category-card">
+
+<div class="icon">🧴</div>
+
+<h3>Crèmes</h3>
+
+<p>Crèmes et pommades naturelles pour tous les besoins.</p>
+
+<a class="btn" href="cremes.html">Voir</a>
+
 </div>
+  <div class="category-card">
+
+<div class="icon">🌿</div>
+
+<h3>Plantes Médicinales</h3>
+
+<p>Les meilleures plantes et épices naturelles.</p>
+
+<a class="btn" href="plantes.html">Voir</a>
+
 </div>
 
-<div class="product creme">
-<img src="https://picsum.photos/400/300?4">
-<div class="product-info">
-<h3>Crème Naturelle</h3>
-<p class="price">65 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
-</div>
+<div class="category-card">
+
+<div class="icon">🌸</div>
+
+<h3>Cosmétiques Naturels</h3>
+
+<p>Découvrez nos produits de beauté naturels.</p>
+
+<a class="btn" href="cosmetiques.html">Voir</a>
+
 </div>
 
-<div class="product creme">
-<img src="https://picsum.photos/400/300?5">
-<div class="product-info">
-<h3>Pommade Naturelle</h3>
-<p class="price">55 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
-</div>
+<div class="category-card">
+
+<div class="icon">🏪</div>
+
+<h3>Tous les Produits</h3>
+
+<p>Voir toutes les catégories et tous les produits.</p>
+
+<a class="btn" href="produits.html">Voir tout</a>
+
 </div>
 
-<div class="product creme">
-<img src="https://picsum.photos/400/300?6">
-<div class="product-info">
-<h3>Crème Aloe Vera</h3>
-<p class="price">70 MAD</p>
-<a class="btn" href="https://wa.me/212711088984">Commander</a>
-</div>
 </div>
 
-<div class="product plante">
-<img src="https://picsum.photos/400/300?7">
-<div class="product-info">
-<h3
+</div>
+
+</section>
+
+<footer>
+
+<h2>🌿 HERBORISTERIE TOUBA</h2>
+
+<p>Produits naturels • Livraison partout au Maroc</p>
+
+<p>📱 WhatsApp : +212711088984</p>
+
+<p>© 2025 HERBORISTERIE TOUBA</p>
+
+</footer>
+
+</body>
+</html>
+}
