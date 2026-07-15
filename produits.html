@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tous les Produits - HERBORISTERIE TOUBA</title>
+<meta name="description" content="Découvrez tous nos produits naturels : huiles, cosmétiques, crèmes et plantes médicinales.">
+<meta name="keywords" content="Herboristerie, Maroc, Huiles, Plantes, Cosmétiques, Naturel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVQWEFY7S4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVQWEFY7S4');
+</script>
+</head>
+<body>
+
+<!--================ HEADER ================-->
+<header>
+<div class="container nav">
+<div class="logo">
+<img src="Picsart_26-07-13_03-03-07-962.png" alt="Logo">
+<span>HERBORISTERIE TOUBA</span>
+</div>
+
+<div class="search-box">
+<svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M10 2a8 8 0 105.29 14.29l4.7 4.7 1.41-1.41-4.7-4.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+</svg>
+<input type="text" id="searchInput" placeholder="Rechercher un produit...">
+<div class="search-results" id="searchResults"></div>
+</div>
+
+<div class="menu-btn">☰</div>
+</div>
+</header>
+
+
+<!--================ PAGE HERO ================-->
+<section class="page-hero">
+<div class="container">
+<h1>🌿 Tous les Produits</h1>
+<p>Découvrez l'ensemble de notre catalogue de produits 100% naturels, classés par catégorie.</p>
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Tous les produits</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="filter-tabs">
+<button class="filter-tab active" data-cat="all">Tous</button>
+<button class="filter-tab" data-cat="huiles">🫒 Huiles</button>
+<button class="filter-tab" data-cat="cosmetiques">💄 Cosmétiques</button>
+<button class="filter-tab" data-cat="cremes">🧴 Crèmes</button>
+<button class="filter-tab" data-cat="plantes">🌿 Plantes Médicinales</button>
+</div>
+<div class="product-grid">
+<div class="product-card" id="huile-argan" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-argan.png" alt="Huile d'Argan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-argan.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name">Huile d'Argan</h3>
+<p class="product-desc">Huile d'argan pure et 100% naturelle, pressée à froid. Nourrit intensément la peau et les cheveux et est riche en vitamine E.</p>
+<div class="product-footer">
+<span class="product-price">120 DH</span>
+<button class="product-btn" onclick="addToCart('Huile d'Argan', 120)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-anti-chute" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-anti-chute-cheveux.png" alt="Huile Anti-Chute de Cheveux" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-anti-chute-cheveux.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name">Huile Anti-Chute de Cheveux</h3>
+<p class="product-desc">Mélange naturel d'huiles essentielles qui renforce les racines, stimule la pousse et réduit la chute des cheveux.</p>
+<div class="product-footer">
+<span class="product-price">95 DH</span>
+<button class="product-btn" onclick="addToCart('Huile Anti-Chute de Cheveux', 95)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-massage" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-de-massage.png" alt="Huile de Massage" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-de-massage.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name">Huile de Massage</h3>
+<p class="product-desc">Huile relaxante enrichie en plantes aromatiques, idéale pour détendre les muscles et apaiser le corps après une longue journée.</p>
+<div class="product-footer">
+<span class="product-price">80 DH</span>
+<button class="product-btn" onclick="addToCart('Huile de Massage', 80)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-rose" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-de-rose.png" alt="Huile de Rose" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-de-rose.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name">Huile de Rose</h3>
+<p class="product-desc">Huile précieuse à la rose de Damas qui hydrate en profondeur, apaise la peau sensible et illumine le teint.</p>
+<div class="product-footer">
+<span class="product-price">150 DH</span>
+<button class="product-btn" onclick="addToCart('Huile de Rose', 150)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="serum-aloe-vera" data-cat="cosmetiques">
+<div class="product-image-wrap">
+<img src="serum-aloe-vera.png" alt="Sérum Visage à l'Aloe Vera" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>serum-aloe-vera.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Cosmétiques</div>
+<h3 class="product-name">Sérum Visage à l'Aloe Vera</h3>
+<p class="product-desc">Sérum léger à base d'aloe vera pur qui hydrate en profondeur, apaise les irritations et redonne de l'éclat au visage.</p>
+<div class="product-footer">
+<span class="product-price">110 DH</span>
+<button class="product-btn" onclick="addToCart('Sérum Visage à l'Aloe Vera', 110)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="baume-levres-karite" data-cat="cosmetiques">
+<div class="product-image-wrap">
+<img src="baume-levres-karite.png" alt="Baume à Lèvres au Beurre de Karité" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>baume-levres-karite.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Cosmétiques</div>
+<h3 class="product-name">Baume à Lèvres au Beurre de Karité</h3>
+<p class="product-desc">Baume nourrissant et fondant qui répare les lèvres gercées et les protège durablement du dessèchement.</p>
+<div class="product-footer">
+<span class="product-price">45 DH</span>
+<button class="product-btn" onclick="addToCart('Baume à Lèvres au Beurre de Karité', 45)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="gommage-sucre-miel" data-cat="cosmetiques">
+<div class="product-image-wrap">
+<img src="gommage-sucre-miel.png" alt="Gommage Corporel au Sucre et Miel" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>gommage-sucre-miel.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Cosmétiques</div>
+<h3 class="product-name">Gommage Corporel au Sucre et Miel</h3>
+<p class="product-desc">Gommage doux qui exfolie les peaux mortes, adoucit la peau et laisse un parfum sucré et enveloppant.</p>
+<div class="product-footer">
+<span class="product-price">90 DH</span>
+<button class="product-btn" onclick="addToCart('Gommage Corporel au Sucre et Miel', 90)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="eau-micellaire-oranger" data-cat="cosmetiques">
+<div class="product-image-wrap">
+<img src="eau-micellaire-fleur-oranger.png" alt="Eau Micellaire à la Fleur d'Oranger" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>eau-micellaire-fleur-oranger.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Cosmétiques</div>
+<h3 class="product-name">Eau Micellaire à la Fleur d'Oranger</h3>
+<p class="product-desc">Eau démaquillante douce qui nettoie le visage en profondeur tout en respectant l'équilibre naturel de la peau.</p>
+<div class="product-footer">
+<span class="product-price">70 DH</span>
+<button class="product-btn" onclick="addToCart('Eau Micellaire à la Fleur d'Oranger', 70)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="creme-hydratante-karite" data-cat="cremes">
+<div class="product-image-wrap">
+<img src="creme-hydratante-karite.png" alt="Crème Hydratante au Beurre de Karité" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>creme-hydratante-karite.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Crèmes</div>
+<h3 class="product-name">Crème Hydratante au Beurre de Karité</h3>
+<p class="product-desc">Crème riche et onctueuse qui hydrate intensément les peaux sèches et restaure la souplesse de la peau.</p>
+<div class="product-footer">
+<span class="product-price">100 DH</span>
+<button class="product-btn" onclick="addToCart('Crème Hydratante au Beurre de Karité', 100)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="creme-anti-rides-argan" data-cat="cremes">
+<div class="product-image-wrap">
+<img src="creme-anti-rides-argan.png" alt="Crème Anti-Rides à l'Huile d'Argan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>creme-anti-rides-argan.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Crèmes</div>
+<h3 class="product-name">Crème Anti-Rides à l'Huile d'Argan</h3>
+<p class="product-desc">Soin anti-âge enrichi en huile d'argan qui atténue les rides, raffermit la peau et redonne de l'éclat au visage.</p>
+<div class="product-footer">
+<span class="product-price">140 DH</span>
+<button class="product-btn" onclick="addToCart('Crème Anti-Rides à l'Huile d'Argan', 140)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="creme-mains-lavande" data-cat="cremes">
+<div class="product-image-wrap">
+<img src="creme-mains-lavande.png" alt="Crème pour Mains à la Lavande" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>creme-mains-lavande.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Crèmes</div>
+<h3 class="product-name">Crème pour Mains à la Lavande</h3>
+<p class="product-desc">Crème légère et parfumée à la lavande qui nourrit les mains sèches et laisse la peau douce toute la journée.</p>
+<div class="product-footer">
+<span class="product-price">55 DH</span>
+<button class="product-btn" onclick="addToCart('Crème pour Mains à la Lavande', 55)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="creme-apaisante-camomille" data-cat="cremes">
+<div class="product-image-wrap">
+<img src="creme-apaisante-camomille.png" alt="Crème Apaisante à la Camomille" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>creme-apaisante-camomille.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Crèmes</div>
+<h3 class="product-name">Crème Apaisante à la Camomille</h3>
+<p class="product-desc">Crème apaisante idéale pour les peaux sensibles ou irritées, elle calme les rougeurs et réconforte la peau.</p>
+<div class="product-footer">
+<span class="product-price">85 DH</span>
+<button class="product-btn" onclick="addToCart('Crème Apaisante à la Camomille', 85)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="camomille-sechee" data-cat="plantes">
+<div class="product-image-wrap">
+<img src="camomille-sechee.png" alt="Camomille Séchée" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>camomille-sechee.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Plantes Médicinales</div>
+<h3 class="product-name">Camomille Séchée</h3>
+<p class="product-desc">Fleurs de camomille séchées, idéales en infusion pour favoriser la détente, calmer l'esprit et améliorer le sommeil.</p>
+<div class="product-footer">
+<span class="product-price">35 DH</span>
+<button class="product-btn" onclick="addToCart('Camomille Séchée', 35)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="menthe-poivree-sechee" data-cat="plantes">
+<div class="product-image-wrap">
+<img src="menthe-poivree-sechee.png" alt="Menthe Poivrée Séchée" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>menthe-poivree-sechee.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Plantes Médicinales</div>
+<h3 class="product-name">Menthe Poivrée Séchée</h3>
+<p class="product-desc">Feuilles de menthe poivrée séchée, parfaites pour une infusion rafraîchissante qui facilite la digestion.</p>
+<div class="product-footer">
+<span class="product-price">30 DH</span>
+<button class="product-btn" onclick="addToCart('Menthe Poivrée Séchée', 30)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="thym-medicinal-seche" data-cat="plantes">
+<div class="product-image-wrap">
+<img src="thym-medicinal-seche.png" alt="Thym Médicinal Séché" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>thym-medicinal-seche.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Plantes Médicinales</div>
+<h3 class="product-name">Thym Médicinal Séché</h3>
+<p class="product-desc">Thym séché aux vertus antiseptiques naturelles, utilisé en infusion pour renforcer les défenses immunitaires.</p>
+<div class="product-footer">
+<span class="product-price">32 DH</span>
+<button class="product-btn" onclick="addToCart('Thym Médicinal Séché', 32)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="romarin-seche" data-cat="plantes">
+<div class="product-image-wrap">
+<img src="romarin-seche.png" alt="Romarin Séché" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>romarin-seche.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Plantes Médicinales</div>
+<h3 class="product-name">Romarin Séché</h3>
+<p class="product-desc">Romarin séché reconnu pour stimuler la mémoire, favoriser la circulation et parfumer agréablement les plats.</p>
+<div class="product-footer">
+<span class="product-price">30 DH</span>
+<button class="product-btn" onclick="addToCart('Romarin Séché', 30)">Ajouter au panier</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--================ FOOTER ================-->
+<footer class="footer">
+
+<div class="footer-brand-bar">
+<img src="Picsart_26-07-13_03-03-07-962.png" class="footer-logo" alt="HERBORISTERIE TOUBA">
+<h2 class="footer-title">HERBORISTERIE TOUBA</h2>
+</div>
+
+<div class="footer-container">
+
+<div class="footer-about">
+<p>
+Votre boutique spécialisée en plantes médicinales, huiles naturelles et produits de bien-être.
+Nous sélectionnons des produits de qualité pour vous offrir une expérience naturelle, saine et authentique.
+</p>
+
+<div class="social-icons">
+<a href="https://wa.me/212711088984" target="_blank" aria-label="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank" aria-label="Instagram">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+</a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Nos Produits</h3>
+<a href="huiles.html">Huiles d'Argan</a>
+<a href="cosmetiques.html">Cosmétiques</a>
+<a href="cremes.html">Crèmes de beauté</a>
+<a href="plantes.html">Plantes Médicinales</a>
+<a href="produits.html">Tous les produits</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Liens Rapides</h3>
+<a href="index.html">Accueil</a>
+<a href="index.html#categories">Catégories</a>
+<a href="produits.html">Produits</a>
+<a href="index.html#reviews">Avis clients</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Contact Direct</h3>
+<p>📍 Marrakech, Maroc</p>
+<a href="tel:+212711088984">+212 711 088 984</a>
+<a href="mailto:babayarmohamedamine4@gmail.com">babayarmohamedamine4@gmail.com</a>
+<a href="https://wa.me/212711088984" target="_blank">WhatsApp</a>
+</div>
+
+</div>
+
+<hr>
+<div class="footer-bottom">
+<p>© 2026 HERBORISTERIE TOUBA · Tous droits réservés.</p>
+<a href="https://wa.me/212711088984" target="_blank" class="footer-cta">Nous contacter →</a>
+</div>
+
+</footer>
+
+<!--================ PANIER ================-->
+<a href="panier.html" class="cart">
+🛒
+<div class="cart-count">0</div>
+</a>
+
+<!--================ WHATSAPP ================-->
+<a href="https://wa.me/212711088984" class="whatsapp" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!--================ RETOUR EN HAUT ================-->
+<a href="#" class="top-btn">⬆️</a>
+
+<div class="menu-overlay" id="overlay"></div>
+
+<div class="side-menu" id="menu">
+<h2>🌿 Menu</h2>
+<a href="index.html">🏠 Accueil</a>
+<a href="index.html#categories">📂 Catégories</a>
+<a href="produits.html">🛍 Produits</a>
+<a href="panier.html">🛒 Panier</a>
+<a href="https://wa.me/212711088984">💬 WhatsApp</a>
+<a href="#">📞 Contact</a>
+</div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
