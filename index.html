@@ -1610,8 +1610,14 @@ WhatsApp
 </p>
 <div class="social-icons">
 
-<a href="https://wa.me/212711088984" target="_blank">💬</a>
+    <a href="https://wa.me/212711088984" target="_blank">
+        💬
+    </a>
+
     <a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank">
+        📷
+    </a>
+
 </div>
 
 </div>
@@ -1693,6 +1699,24 @@ overlay.addEventListener("click", () => {
     menu.classList.remove("active");
     overlay.classList.remove("active");
 });
+    <script>
+
+const topBtn = document.querySelector(".top-btn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        topBtn.style.display = "flex";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+});
+
 </script>
 </body>
 </html>
