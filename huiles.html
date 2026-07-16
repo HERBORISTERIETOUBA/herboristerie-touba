@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huiles Naturelles - HERBORISTERIE TOUBA</title>
+<meta name="description" content="Huiles 100% naturelles : argan, anti-chute, massage et rose.">
+<meta name="keywords" content="Herboristerie, Maroc, Huiles, Plantes, Cosmétiques, Naturel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVQWEFY7S4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVQWEFY7S4');
+</script>
+</head>
+<body data-page="produits">
+
+<!--================ HEADER ================-->
+<header>
+<div class="container nav">
+<div class="logo">
+<img src="logo.png" alt="Logo">
+<span>HERBORISTERIE TOUBA</span>
+</div>
+
+<div class="search-box">
+<svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M10 2a8 8 0 105.29 14.29l4.7 4.7 1.41-1.41-4.7-4.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+</svg>
+<input type="text" id="searchInput" placeholder="Rechercher un produit...">
+<div class="search-results" id="searchResults"></div>
+</div>
+
+<div class="menu-btn">☰</div>
+</div>
+</header>
+
+
+<!--================ PAGE HERO ================-->
+<section class="page-hero">
+<img src="banner-huiles.png" alt="Huiles Naturelles" class="page-hero-banner">
+<div class="container page-hero-text">
+<h1>🫒 Huiles Naturelles</h1>
+<p>Une sélection d'huiles pures et 100% naturelles pour prendre soin de vos cheveux, de votre peau et de votre bien-être au quotidien.</p>
+<button class="back-btn" onclick="goBack()">← Retour</button>
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Huiles</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="product-grid">
+<div class="product-card" id="huile-argan" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-argan.png" alt="Huile d'Argan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-argan.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name"><a href="produit.html?id=huile-argan">Huile d'Argan</a></h3>
+<p class="product-desc">Huile d'argan pure et 100% naturelle, pressée à froid. Nourrit intensément la peau et les cheveux et est riche en vitamine E.</p>
+<div class="product-footer">
+<span class="product-price">120 DH</span>
+<button class="product-btn" data-name="Huile d'Argan" data-price="120" data-img="huile-argan.png">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-anti-chute" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-anti-chute-cheveux.png" alt="Huile Anti-Chute de Cheveux" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-anti-chute-cheveux.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name"><a href="produit.html?id=huile-anti-chute">Huile Anti-Chute de Cheveux</a></h3>
+<p class="product-desc">Mélange naturel d'huiles essentielles qui renforce les racines, stimule la pousse et réduit la chute des cheveux.</p>
+<div class="product-footer">
+<span class="product-price">95 DH</span>
+<button class="product-btn" data-name="Huile Anti-Chute de Cheveux" data-price="95" data-img="huile-anti-chute-cheveux.png">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-massage" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-de-massage.png" alt="Huile de Massage" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-de-massage.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name"><a href="produit.html?id=huile-massage">Huile de Massage</a></h3>
+<p class="product-desc">Huile relaxante enrichie en plantes aromatiques, idéale pour détendre les muscles et apaiser le corps après une longue journée.</p>
+<div class="product-footer">
+<span class="product-price">80 DH</span>
+<button class="product-btn" data-name="Huile de Massage" data-price="80" data-img="huile-de-massage.png">Ajouter au panier</button>
+</div>
+</div>
+</div>
+
+<div class="product-card" id="huile-rose" data-cat="huiles">
+<div class="product-image-wrap">
+<img src="huile-de-rose.png" alt="Huile de Rose" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div class="image-placeholder">
+<span class="ph-icon">🌿</span>
+<span>huile-de-rose.png</span>
+</div>
+</div>
+<div class="product-info">
+<div class="product-cat">Huiles</div>
+<h3 class="product-name"><a href="produit.html?id=huile-rose">Huile de Rose</a></h3>
+<p class="product-desc">Huile précieuse à la rose de Damas qui hydrate en profondeur, apaise la peau sensible et illumine le teint.</p>
+<div class="product-footer">
+<span class="product-price">150 DH</span>
+<button class="product-btn" data-name="Huile de Rose" data-price="150" data-img="huile-de-rose.png">Ajouter au panier</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--================ FOOTER ================-->
+<footer class="footer">
+
+<div class="footer-brand-bar">
+<img src="logo.png" class="footer-logo" alt="HERBORISTERIE TOUBA">
+<h2 class="footer-title">HERBORISTERIE TOUBA</h2>
+</div>
+
+<div class="footer-container">
+
+<div class="footer-about">
+<p>
+Votre boutique spécialisée en plantes médicinales, huiles naturelles et produits de bien-être.
+Nous sélectionnons des produits de qualité pour vous offrir une expérience naturelle, saine et authentique.
+</p>
+
+<div class="social-icons">
+<a href="https://wa.me/212711088984" target="_blank" aria-label="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank" aria-label="Instagram">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+</a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Nos Produits</h3>
+<a href="huiles.html">Huiles d'Argan</a>
+<a href="cosmetiques.html">Cosmétiques</a>
+<a href="cremes.html">Crèmes de beauté</a>
+<a href="plantes.html">Plantes Médicinales</a>
+<a href="produits.html">Tous les produits</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Liens Rapides</h3>
+<a href="index.html">Accueil</a>
+<a href="index.html#categories">Catégories</a>
+<a href="produits.html">Produits</a>
+<a href="index.html#reviews">Avis clients</a>
+<a href="apropos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Contact Direct</h3>
+<p>📍 Marrakech, Maroc</p>
+<a href="tel:+212711088984">+212 711 088 984</a>
+<a href="mailto:babayarmohamedamine4@gmail.com">babayarmohamedamine4@gmail.com</a>
+<a href="https://wa.me/212711088984" target="_blank">WhatsApp</a>
+</div>
+
+</div>
+
+<hr>
+<div class="footer-bottom">
+<p>© 2026 HERBORISTERIE TOUBA · Tous droits réservés.</p>
+<a href="https://wa.me/212711088984" target="_blank" class="footer-cta">Nous contacter →</a>
+</div>
+
+</footer>
+
+<!--================ PANIER ================-->
+<a href="panier.html" class="cart">
+🛒
+<div class="cart-count">0</div>
+</a>
+
+<!--================ WHATSAPP ================-->
+<a href="https://wa.me/212711088984" class="whatsapp" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!--================ RETOUR EN HAUT ================-->
+<a href="#" class="top-btn">⬆️</a>
+
+<div class="menu-overlay" id="overlay"></div>
+
+<div class="side-menu" id="menu">
+<h2>🌿 Menu</h2>
+<a href="index.html">🏠 Accueil</a>
+<a href="index.html#categories">📂 Catégories</a>
+<a href="produits.html">🛍 Produits</a>
+<a href="panier.html">🛒 Panier</a>
+<a href="https://wa.me/212711088984">💬 WhatsApp</a>
+<a href="apropos.html">ℹ️ À propos</a>
+<a href="contact.html">📞 Contact</a>
+</div>
+
+
+
+<!--================ MENU MOBILE FIXE ================-->
+<nav class="mobile-nav">
+<a href="index.html" class="mn-item" data-page="index"><span class="mn-icon">🏠</span><span>Accueil</span></a>
+<a href="produits.html" class="mn-item" data-page="produits"><span class="mn-icon">📂</span><span>Catégories</span></a>
+<a href="panier.html" class="mn-item" data-page="panier"><span class="mn-icon">🛒</span><span>Panier</span><span class="mn-badge cart-count">0</span></a>
+<a href="https://wa.me/212711088984" target="_blank" class="mn-item mn-whatsapp"><span class="mn-icon">💬</span><span>WhatsApp</span></a>
+<a href="contact.html" class="mn-item" data-page="contact"><span class="mn-icon">📞</span><span>Contact</span></a>
+</nav>
+
+<script src="main.js"></script>
+
+</body>
+</html>
