@@ -172,7 +172,7 @@ transform:rotate(90deg);
 .hero{
 margin-top:90px;
 height:470px;
-background:url("banner-accueil.png") center/cover no-repeat;
+background:url("banner.png") center/cover no-repeat;
 border-radius:0 0 35px 35px;
 overflow:hidden;
 }
