@@ -2002,7 +2002,7 @@ padding:8px 16px;
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: slider 24s infinite;
+    animation: slider 32s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .slide:nth-child(1) {
@@ -2024,26 +2024,26 @@ padding:8px 16px;
 @keyframes slider {
     0% {
         opacity: 0;
-        transform: scale(1.08);
+        transform: scale(1.15) translateX(2%);
     }
 
-    8% {
+    10% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1.10) translateX(1%);
     }
 
-    25% {
+    45% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1.03) translateX(0%);
     }
 
-    33% {
+    55% {
         opacity: 0;
-        transform: scale(1.05);
+        transform: scale(1.00) translateX(-1%);
     }
 
     100% {
         opacity: 0;
-        transform: scale(1.08);
+        transform: scale(1.15) translateX(-2%);
     }
 }
