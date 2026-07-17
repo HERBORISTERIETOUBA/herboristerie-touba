@@ -2591,3 +2591,66 @@ display:block;
 grid-template-columns:1fr;
 }
 }
+/* ===== Animated Banner ===== */
+
+.page-banner-slider{
+    position:relative;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+    border-radius:0 0 24px 24px;
+}
+
+.banner-slide{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transform:scale(1.15);
+    animation:bannerSlider 32s infinite;
+    will-change:transform,opacity;
+}
+
+.banner-slide:nth-child(1){animation-delay:0s;}
+.banner-slide:nth-child(2){animation-delay:8s;}
+.banner-slide:nth-child(3){animation-delay:16s;}
+.banner-slide:nth-child(4){animation-delay:24s;}
+
+@keyframes bannerSlider{
+
+0%{
+opacity:0;
+transform:scale(1.15);
+}
+
+5%{
+opacity:1;
+transform:scale(1.08);
+}
+
+20%{
+opacity:1;
+transform:scale(1);
+}
+
+25%{
+opacity:0;
+transform:scale(1.05);
+}
+
+100%{
+opacity:0;
+transform:scale(1.15);
+}
+
+}
+
+@media(max-width:768px){
+
+.page-banner-slider{
+height:240px;
+}
+
+}
