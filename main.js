@@ -1,3 +1,4 @@
+import "./firebase-config.js";
 /* =========================================================
    HERBORISTERIE TOUBA — main.js
    Numéro WhatsApp de la boutique (utilisé pour les commandes)
