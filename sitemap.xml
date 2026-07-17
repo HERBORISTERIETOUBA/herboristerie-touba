@@ -1,74 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/index.html</loc>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/produits.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/produits.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/produit.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/produit.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/huiles.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/huiles.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/cremes.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/cremes.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/cosmetiques.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/cosmetiques.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/plantes.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/plantes.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/panier.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/panier.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/apropos.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/apropos.html</loc>
+</url>
 
-  <url>
-    <loc>https://herboristerietouba.github.io/herboristerie-touba/contact.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://herboristerietouba.github.io/herboristerie-touba/contact.html</loc>
+</url>
 
 </urlset>
