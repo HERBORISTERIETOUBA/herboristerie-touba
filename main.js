@@ -1,4 +1,5 @@
-import "./firebase-config.js";
+import { db } from "./firebase-config.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 /* =========================================================
    HERBORISTERIE TOUBA — main.js
    Numéro WhatsApp de la boutique (utilisé pour les commandes)
