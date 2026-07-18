@@ -261,21 +261,6 @@ Les commandes passées depuis le panier du site sont désormais enregistrées au
 </div>
 </div>
 </div>
-<script>
-const sidebar = document.getElementById("dashSidebar");
-const toggle = document.getElementById("sidebarToggle");
-const overlay = document.getElementById("dashOverlay");
-
-toggle.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
-    overlay.style.display = sidebar.classList.contains("open") ? "block" : "none";
-});
-
-overlay.addEventListener("click", () => {
-    sidebar.classList.remove("open");
-    overlay.style.display = "none";
-});
-</script>
 
 <script type="module" src="dashboard.js"></script>
 
