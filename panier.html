@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Panier - HERBORISTERIE TOUBA</title>
+<meta name="description" content="Votre panier d'achats HERBORISTERIE TOUBA.">
+<meta name="keywords" content="Herboristerie, Maroc, Panier, Commande">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVQWEFY7S4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVQWEFY7S4');
+</script>
+</head>
+<body data-page="panier">
+
+<!--================ HEADER ================-->
+<header>
+<div class="container nav">
+<div class="logo">
+<img src="logo.png" alt="Logo">
+<span>HERBORISTERIE TOUBA</span>
+</div>
+
+<div class="search-box">
+<svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M10 2a8 8 0 105.29 14.29l4.7 4.7 1.41-1.41-4.7-4.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+</svg>
+<input type="text" id="searchInput" placeholder="Rechercher un produit...">
+<div class="search-results" id="searchResults"></div>
+</div>
+
+<a href="favoris.html" class="fav-header-btn" aria-label="Favoris"><span>♥</span><span class="fav-count">0</span></a>
+<div class="menu-btn">☰</div>
+</div>
+</header>
+
+
+<!--================ PAGE HERO ================-->
+<section class="page-hero">
+<img src="banner-produits.png" alt="Mon Panier" class="page-hero-banner">
+<div class="container page-hero-text">
+<h1>🛒 Mon Panier</h1>
+<p>Vérifiez vos produits, ajustez les quantités et passez votre commande en paiement à la livraison.</p>
+<button class="back-btn" onclick="goBack()">← Retour</button>
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Panier</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="cart-page-wrap" id="cartPageContent">
+
+<div class="cart-header-row">
+<h2>Votre panier</h2>
+<span id="cartHeaderCount">0</span>
+</div>
+
+<div class="cart-empty" id="cartEmpty">
+<span class="empty-icon">🛒</span>
+<h3>Votre panier est vide</h3>
+<p>Parcourez nos produits naturels et ajoutez vos favoris au panier.</p>
+<a href="produits.html" class="btn">Voir les produits</a>
+</div>
+
+<div class="cart-list" id="cartList"></div>
+
+<div class="cart-summary-card" id="cartSummary">
+<div class="cart-summary-row">
+<span>Articles</span>
+<span id="cartItemCount">0</span>
+</div>
+<div class="cart-summary-row total">
+<span>Sous-total</span>
+<span id="cartTotal">0 DH</span>
+</div>
+<button class="checkout-btn" id="openCheckoutBtn">Commander (Paiement à la livraison)</button>
+<button class="clear-cart-link" onclick="clearCart()">Vider le panier</button>
+
+<div class="trust-row">
+<span>🚚 Livraison rapide partout au Maroc</span>
+<span>💳 Paiement à la livraison</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!--================ MODALE DE COMMANDE ================-->
+<div class="checkout-overlay" id="checkoutOverlay">
+<div class="checkout-modal">
+<button class="checkout-close" onclick="closeCheckout()" aria-label="Fermer">✕</button>
+<h3>Finaliser la commande</h3>
+<p class="sub">Paiement à la livraison — remplissez vos coordonnées, votre commande sera envoyée sur WhatsApp pour confirmation.</p>
+
+<div class="checkout-summary" id="checkoutSummary"></div>
+
+<form id="checkoutForm">
+<div class="checkout-field">
+<label for="checkoutName">Nom complet</label>
+<input type="text" id="checkoutName" required placeholder="Votre nom">
+</div>
+<div class="checkout-field">
+<label for="checkoutPhone">Téléphone</label>
+<input type="tel" id="checkoutPhone" required placeholder="06 00 00 00 00">
+</div>
+<div class="checkout-field">
+<label for="checkoutCity">Ville</label>
+<input type="text" id="checkoutCity" required placeholder="Marrakech, Casablanca...">
+</div>
+<div class="checkout-field">
+<label for="checkoutAddress">Adresse (optionnel)</label>
+<textarea id="checkoutAddress" placeholder="Quartier, rue, repère..."></textarea>
+</div>
+<button type="submit" class="checkout-btn">💬 Envoyer la commande via WhatsApp</button>
+</form>
+</div>
+</div>
+
+<!--================ FOOTER ================-->
+<footer class="footer">
+
+<div class="footer-brand-bar">
+<img src="logo.png" class="footer-logo" alt="HERBORISTERIE TOUBA">
+<h2 class="footer-title">HERBORISTERIE TOUBA</h2>
+</div>
+
+<div class="footer-container">
+
+<div class="footer-about">
+<p>
+Votre boutique spécialisée en plantes médicinales, huiles naturelles et produits de bien-être.
+Nous sélectionnons des produits de qualité pour vous offrir une expérience naturelle, saine et authentique.
+</p>
+
+<div class="social-icons">
+<a href="https://wa.me/212711088984" target="_blank" aria-label="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank" aria-label="Instagram">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+</a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Nos Produits</h3>
+<a href="huiles.html">Huiles d'Argan</a>
+<a href="cosmetiques.html">Cosmétiques</a>
+<a href="cremes.html">Crèmes de beauté</a>
+<a href="plantes.html">Plantes Médicinales</a>
+<a href="produits.html">Tous les produits</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Liens Rapides</h3>
+<a href="index.html">Accueil</a>
+<a href="index.html#categories">Catégories</a>
+<a href="produits.html">Produits</a>
+<a href="index.html#reviews">Avis clients</a>
+<a href="apropos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Contact Direct</h3>
+<p>📍 Marrakech, Maroc</p>
+<a href="tel:+212711088984">+212 711 088 984</a>
+<a href="mailto:babayarmohamedamine4@gmail.com">babayarmohamedamine4@gmail.com</a>
+<a href="https://wa.me/212711088984" target="_blank">WhatsApp</a>
+</div>
+
+</div>
+
+<hr>
+<div class="footer-bottom">
+<p>© 2026 HERBORISTERIE TOUBA · Tous droits réservés.</p>
+<a href="https://wa.me/212711088984" target="_blank" class="footer-cta">Nous contacter →</a>
+</div>
+
+</footer>
+
+<!--================ PANIER ================-->
+<a href="panier.html" class="cart">
+🛒
+<div class="cart-count">0</div>
+</a>
+
+<!--================ WHATSAPP ================-->
+<a href="https://wa.me/212711088984" class="whatsapp" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!--================ RETOUR EN HAUT ================-->
+<a href="#" class="top-btn">⬆️</a>
+
+<div class="menu-overlay" id="overlay"></div>
+
+<div class="side-menu" id="menu">
+<h2>🌿 Menu</h2>
+<a href="index.html">🏠 Accueil</a>
+<a href="index.html#categories">📂 Catégories</a>
+<a href="produits.html">🛍 Produits</a>
+<a href="panier.html">🛒 Panier</a>
+<a href="favoris.html">❤️ Favoris</a>
+<a href="https://wa.me/212711088984">💬 WhatsApp</a>
+<a href="apropos.html">ℹ️ À propos</a>
+<a href="contact.html">📞 Contact</a>
+</div>
+
+
+
+<!--================ MENU MOBILE FIXE ================-->
+<nav class="mobile-nav">
+<a href="index.html" class="mn-item" data-page="index"><span class="mn-icon">🏠</span><span>Accueil</span></a>
+<a href="produits.html" class="mn-item" data-page="produits"><span class="mn-icon">📂</span><span>Catégories</span></a>
+<a href="panier.html" class="mn-item" data-page="panier"><span class="mn-icon">🛒</span><span>Panier</span><span class="mn-badge cart-count">0</span></a>
+<a href="favoris.html" class="mn-item" data-page="favoris"><span class="mn-icon">❤️</span><span>Favoris</span><span class="mn-badge fav-count">0</span></a>
+<a href="https://wa.me/212711088984" target="_blank" class="mn-item mn-whatsapp"><span class="mn-icon">💬</span><span>WhatsApp</span></a>
+<a href="contact.html" class="mn-item" data-page="contact"><span class="mn-icon">📞</span><span>Contact</span></a>
+</nav>
+
+<script src="main.js"></script>
+
+</body>
+</html>
