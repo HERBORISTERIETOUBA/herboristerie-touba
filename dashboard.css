@@ -556,3 +556,43 @@ font-size:13px;
 font-weight:800;
 color:#4a6b52;
 }
+/* زر القائمة */
+.sidebar-toggle{
+    position:fixed;
+    top:15px;
+    left:15px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    background:#1f5d42;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* إخفاء الشريط الجانبي */
+.dash-sidebar{
+    transform:translateX(-100%);
+    transition:0.35s;
+}
+
+/* عند الفتح */
+.dash-sidebar.open{
+    transform:translateX(0);
+}
+
+/* على الشاشات الكبيرة يبقى ظاهراً */
+@media(min-width:992px){
+    .sidebar-toggle{
+        display:none;
+    }
+
+    .dash-sidebar{
+        transform:translateX(0);
+    }
+}
