@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord - HERBORISTERIE TOUBA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dash-wrap">
+
+<!--================ SIDEBAR ================-->
+<aside class="dash-sidebar" id="dashSidebar">
+<div class="dash-brand">
+<div class="dash-brand-logo">🌿</div>
+<div class="dash-brand-text">Herboristerie Touba<span>ESPACE ADMIN</span></div>
+</div>
+
+<nav class="dash-nav">
+<button class="dash-nav-item active" data-section="overview"><span class="icon">🏠</span> Tableau de bord</button>
+<button class="dash-nav-item" data-section="products"><span class="icon">📦</span> Produits</button>
+<button class="dash-nav-item" data-section="content"><span class="icon">🖊️</span> Contenu du site</button>
+<button class="dash-nav-item" data-section="delivery"><span class="icon">🚚</span> Livraison</button>
+<button class="dash-nav-item" data-section="discounts"><span class="icon">🎟️</span> Codes promo</button>
+<button class="dash-nav-item" data-section="orders"><span class="icon">🛒</span> Commandes</button>
+<button class="dash-nav-item" data-section="visitors"><span class="icon">🌍</span> Visiteurs</button>
+<button class="dash-nav-item" data-section="intelligence"><span class="icon">🧠</span> Intelligence</button>
+<button class="dash-nav-item" data-section="stats"><span class="icon">📊</span> Statistiques</button>
+</nav>
+
+<div class="dash-logout">
+<button id="logoutBtn">🚪 Déconnexion</button>
+</div>
+</aside>
+
+<div class="menu-overlay" id="dashOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:390;"></div>
+
+<!--================ MAIN ================-->
+<main class="dash-main">
+
+<div class="dash-topbar">
+<div>
+<h1 id="dashTitle">Tableau de bord</h1>
+<p id="dashSubtitle">Bienvenue, gérez votre boutique en un coup d'œil.</p>
+</div>
+<button class="dash-mobile-toggle" id="dashMobileToggle">☰</button>
+</div>
+
+<!--================ SECTION : APERÇU (TOUBA OS) ================-->
+<section class="dash-section active" id="section-overview">
+
+<h2 class="dash-greeting" id="dashGreeting">Bonjour 👋</h2>
+
+<div class="dash-health-banner status-ok" id="dashHealthBanner">
+<span class="dash-health-icon" id="dashHealthIcon">🟢</span>
+<div class="dash-health-text">
+<div class="dash-health-title" id="dashHealthTitle">Tout va bien aujourd'hui</div>
+<div class="dash-health-sub" id="dashHealthSub">Analyse basée sur vos données réelles (demandes clients, stock renseigné, commandes en attente).</div>
+</div>
+</div>
+
+<div class="dash-stats">
+<div class="dash-stat-card">
+<div class="dash-stat-icon">👀</div>
+<div>
+<div class="dash-stat-value" id="statVisits">—</div>
+<div class="dash-stat-label">Visites aujourd'hui <span class="dash-stat-trend" id="trendVisits"></span></div>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon">🛒</div>
+<div>
+<div class="dash-stat-value" id="statOrdersToday">—</div>
+<div class="dash-stat-label">Commandes aujourd'hui <span class="dash-stat-trend" id="trendOrders"></span></div>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon">📦</div>
+<div>
+<div class="dash-stat-value" id="statProducts">—</div>
+<div class="dash-stat-label">Produits publiés</div>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon">🔥</div>
+<div>
+<div class="dash-stat-value" id="statDemandSignals">—</div>
+<div class="dash-stat-label">Demandes clients (7j)</div>
+</div>
+</div>
+</div>
+
+<div class="dash-card">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+<h2 style="margin:0;">Actions recommandées</h2>
+</div>
+<div id="dashActionsList">
+<div class="dash-action-empty">Analyse en cours...</div>
+</div>
+</div>
+
+<div class="dash-card">
+<h2>À propos de cet espace</h2>
+<p class="sub" style="margin-bottom:0;">
+Toutes les données affichées ici (visites, demandes clients, stock) proviennent de votre boutique réelle. Aucune donnée n'est inventée : si une information n'est pas encore disponible (ex. stock non renseigné), elle n'apparaît simplement pas dans les alertes.
+</p>
+</div>
+
+</section>
+
+<!--================ SECTION : INTELLIGENCE (TOUBA OS) ================-->
+<section class="dash-section" id="section-intelligence">
+
+<div class="dash-card">
+<div class="dash-intel-tabs">
+<button class="dash-intel-tab active" data-intel-tab="report">Rapport du jour</button>
+<button class="dash-intel-tab" data-intel-tab="opportunities">Opportunités</button>
+<button class="dash-intel-tab" data-intel-tab="alerts">Alertes</button>
+</div>
+
+<div class="dash-intel-panel active" id="intelPanelReport">
+<div id="intelReportContent"><p class="sub">Analyse en cours...</p></div>
+</div>
+
+<div class="dash-intel-panel" id="intelPanelOpportunities">
+<p class="sub">Demandes clients répétées (via Touba AI et la recherche) pour des produits que vous n'avez pas encore, ou peu visibles. Chaque chiffre provient de votre boutique réelle (collection <code>demand_signals</code>).</p>
+<div id="intelOpportunitiesList"></div>
+</div>
+
+<div class="dash-intel-panel" id="intelPanelAlerts">
+<p class="sub">Alertes basées sur le stock que vous avez renseigné dans la fiche produit (aucune alerte n'est générée pour les produits sans stock renseigné).</p>
+<div id="intelAlertsList"></div>
+
+<h3 style="margin-top:24px;font-size:15px;">🩺 État de la boutique (Store Health)</h3>
+<p class="sub">Vérification automatique de vos fiches produits réelles — aucune donnée inventée.</p>
+<div id="intelStoreHealthList"></div>
+</div>
+</div>
+
+</section>
+
+<!--================ SECTION : PRODUITS ================-->
+<section class="dash-section" id="section-products">
+
+<div class="dash-card">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
+<div>
+<h2>Produits</h2>
+<p class="sub" style="margin-bottom:0;">Ajoutez, modifiez ou supprimez les produits affichés sur le site.</p>
+</div>
+<button class="dash-btn dash-btn-primary" id="openAddProductBtn">+ Ajouter un produit</button>
+</div>
+
+<div class="dash-table-wrap">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Image</th>
+<th>Nom</th>
+<th>Catégorie</th>
+<th>Prix</th>
+<th>Stock</th>
+<th>Visibilité</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="productsTableBody">
+<tr><td colspan="7" class="dash-table-empty">Chargement des produits...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</section>
+
+<!--================ SECTION : CONTENU DU SITE ================-->
+<section class="dash-section" id="section-content">
+
+<div class="dash-card">
+<h2>Bannière de la page d'accueil</h2>
+<p class="sub">Ce texte apparaît en haut de la page d'accueil du site (index.html).</p>
+
+<div class="dash-field">
+<label for="heroTitleInput">Titre</label>
+<input id="heroTitleInput" placeholder="Produits Naturels">
+</div>
+<div class="dash-field">
+<label for="heroSubtitleInput">Sous-titre</label>
+<input id="heroSubtitleInput" placeholder="Pour votre beauté et votre bien-être">
+</div>
+<div class="dash-field">
+<label for="heroBtnInput">Texte du bouton</label>
+<input id="heroBtnInput" placeholder="Découvrir nos produits">
+</div>
+
+<button class="dash-btn dash-btn-primary" id="saveContentBtn">💾 Enregistrer</button>
+<p id="contentMessage"></p>
+</div>
+
+</section>
+
+<!--================ SECTION : LIVRAISON ================-->
+<section class="dash-section" id="section-delivery">
+<div class="dash-card">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
+<div>
+<h2>Villes de livraison</h2>
+<p class="sub" style="margin-bottom:0;">Ces prix s'affichent sur la fiche produit et dans le panier. Si cette liste est vide, une liste par défaut est utilisée automatiquement.</p>
+</div>
+<button class="dash-btn dash-btn-primary" id="openAddCityBtn">+ Ajouter une ville</button>
+</div>
+
+<div class="dash-table-wrap">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Ville</th>
+<th>Frais de livraison</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="citiesTableBody">
+<tr><td colspan="3" class="dash-table-empty">Chargement...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!--================ SECTION : CODES PROMO ================-->
+<section class="dash-section" id="section-discounts">
+<div class="dash-card">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
+<div>
+<h2>Codes de réduction</h2>
+<p class="sub" style="margin-bottom:0;">Chaque code est à usage unique : il passe automatiquement à "Utilisé" seulement quand une commande est confirmée avec ce code — jamais avant, même si un client clique sur "Appliquer" sans finaliser sa commande.</p>
+</div>
+<button class="dash-btn dash-btn-primary" id="openAddDiscountBtn">+ Créer un code</button>
+</div>
+
+<div class="dash-table-wrap">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Code</th>
+<th>Réduction</th>
+<th>Statut</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="discountsTableBody">
+<tr><td colspan="4" class="dash-table-empty">Chargement...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!--================ SECTION : COMMANDES ================-->
+<section class="dash-section" id="section-orders">
+<div class="dash-card">
+<h2>Commandes</h2>
+<p class="sub">Commandes passées via le panier du site (paiement à la livraison).</p>
+
+<div class="dash-table-wrap">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Date</th>
+<th>Client</th>
+<th>Téléphone</th>
+<th>Ville</th>
+<th>Total</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody id="ordersTableBody">
+<tr><td colspan="6" class="dash-table-empty">Chargement des commandes...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!--================ SECTION : VISITEURS (audience réelle) ================-->
+<section class="dash-section" id="section-visitors">
+
+<div class="dash-card">
+<h2>📅 Aujourd'hui</h2>
+<div id="visitorsDailyDigest"><p class="sub">Analyse en cours...</p></div>
+</div>
+
+<div class="dash-card">
+<h2>📣 Sources de trafic (30 derniers jours)</h2>
+<p class="sub">Basé uniquement sur le referrer réel du navigateur ou les paramètres UTM réels — jamais deviné.</p>
+<div id="visitorsSourcesChart"></div>
+</div>
+
+<div class="dash-card">
+<h2>🔍 Recherches les plus fréquentes (30 derniers jours)</h2>
+<p class="sub">Ce que vos visiteurs tapent réellement dans la barre de recherche du site.</p>
+<div id="visitorsSearchesChart"></div>
+</div>
+
+<div class="dash-card">
+<h2>👥 Sessions récentes</h2>
+<div class="dash-table-wrap">
+<table class="dash-table">
+<thead>
+<tr>
+<th>Arrivée</th>
+<th>Durée</th>
+<th>Source</th>
+<th>Langue</th>
+<th>Pages vues</th>
+<th>Recherches</th>
+</tr>
+</thead>
+<tbody id="visitorsSessionsTableBody">
+<tr><td colspan="6" class="dash-table-empty">Chargement des sessions...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</section>
+
+<!--================ SECTION : STATISTIQUES ================-->
+<section class="dash-section" id="section-stats">
+
+<div class="dash-stats">
+<div class="dash-stat-card">
+<div class="dash-stat-icon">🛒</div>
+<div>
+<div class="dash-stat-value" id="statOrders">—</div>
+<div class="dash-stat-label">Commandes reçues</div>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon">💰</div>
+<div>
+<div class="dash-stat-value" id="statRevenue">—</div>
+<div class="dash-stat-label">Chiffre d'affaires total</div>
+</div>
+</div>
+<div class="dash-stat-card">
+<div class="dash-stat-icon">📈</div>
+<div>
+<div class="dash-stat-value" id="statAvgOrder">—</div>
+<div class="dash-stat-label">Panier moyen</div>
+</div>
+</div>
+</div>
+
+<div class="dash-card">
+<h2>Produits les plus commandés</h2>
+<p class="sub">Basé sur les quantités vendues dans toutes les commandes reçues.</p>
+<div id="topProductsList"></div>
+</div>
+
+<div class="dash-card">
+<h2>📊 Analytics par produit</h2>
+<p class="sub">Vues, ajouts au panier et achats réels par produit (les 3000 événements les plus récents). Le suivi vient d'être introduit en V10 : les données s'accumulent à partir de maintenant, rien n'est reconstitué a posteriori.</p>
+<div id="productAnalyticsList"><p class="sub">Chargement...</p></div>
+</div>
+
+<div class="dash-card">
+<h2>👥 Segments clients</h2>
+<p class="sub">Basé sur le numéro de téléphone des 500 dernières commandes chargées — donnée admin uniquement, jamais exposée au public ni à l'IA.</p>
+<div id="customerSegmentsList"><p class="sub">Chargement...</p></div>
+</div>
+
+<div class="dash-card">
+<h2>🔻 Funnel</h2>
+<p class="sub">Sessions réelles ayant progressé dans chaque étape (basé sur <code>sessions</code>, <code>product_events</code> et <code>orders</code>).</p>
+<div id="funnelList"><p class="sub">Chargement...</p></div>
+</div>
+
+<div class="dash-card">
+<h2>🛒 Paniers abandonnés</h2>
+<p class="sub">Estimation : sessions ayant ajouté un produit au panier mais n'ayant abouti à aucune commande enregistrée avec ce même identifiant de session. Une commande passée sans que la session ait pu être identifiée (ex. ancien navigateur, tracking bloqué) n'est pas comptée dans ce total — donnée indicative, pas exacte à 100%.</p>
+<div class="dash-stat-card" style="max-width:260px;">
+<div class="dash-stat-icon">🛒</div>
+<div>
+<div class="dash-stat-value" id="abandonedCartCount">—</div>
+<div class="dash-stat-label">Paniers abandonnés (estimation)</div>
+</div>
+</div>
+</div>
+
+<div class="dash-card">
+<h2>🔍 Recherches sans résultat</h2>
+<p class="sub">Ce que vos visiteurs cherchent mais que le site ne trouve pas — signal direct de demande non satisfaite (Section 40).</p>
+<div id="zeroResultSearchesList"><p class="sub">Chargement...</p></div>
+</div>
+
+</section>
+
+</main>
+</div>
+
+<!--================ MODALE PRODUIT (ajout / modification) ================-->
+<div class="dash-modal-overlay" id="productModalOverlay">
+<div class="dash-modal">
+<h2 id="productModalTitle">Ajouter un produit</h2>
+
+<div class="dash-field">
+<label for="nom">Nom du produit</label>
+<input id="nom" placeholder="Ex : Huile d'Argan">
+</div>
+
+<div class="dash-form-row">
+<div class="dash-field">
+<label for="prix">Prix (DH)</label>
+<input id="prix" type="number" placeholder="120">
+</div>
+<div class="dash-field">
+<label for="ancienPrix">Prix barré / promo (optionnel)</label>
+<input id="ancienPrix" type="number" placeholder="150">
+</div>
+</div>
+
+<div class="dash-form-row">
+<div class="dash-field">
+<label for="categorie">Catégorie</label>
+<select id="categorie">
+<option value="huiles">Huiles</option>
+<option value="cremes">Crèmes</option>
+<option value="plantes">Plantes</option>
+<option value="cosmetiques">Cosmétiques</option>
+</select>
+</div>
+<div class="dash-field">
+<label for="visible">Visibilité</label>
+<select id="visible">
+<option value="1">Visible sur le site</option>
+<option value="0">Masqué (brouillon)</option>
+</select>
+</div>
+</div>
+
+<div class="dash-field">
+<label for="stock">Stock (optionnel — laissez vide si non suivi)</label>
+<input id="stock" type="number" min="0" placeholder="Ex : 25">
+<p class="dash-field-hint">Renseignez ce champ pour activer les alertes de stock dans Intelligence. Si vide, aucune alerte n'est générée pour ce produit (nous n'inventons jamais un niveau de stock).</p>
+</div>
+
+<div class="dash-field">
+<label for="image">Lien de l'image</label>
+<input id="image" placeholder="huile-argan.png">
+</div>
+
+<div class="dash-field">
+<label for="description">Description (Français)</label>
+<textarea id="description" placeholder="Description du produit en français"></textarea>
+</div>
+
+<div class="dash-field">
+<label for="descriptionAr">الوصف (بالعربية) — اختياري</label>
+<textarea id="descriptionAr" dir="rtl" placeholder="وصف المنتج بالعربية (إن لم تكتبه، سيُعرض الوصف الفرنسي للزوار الذين يستخدمون العربية)"></textarea>
+<p class="dash-field-hint">إذا تركته فارغًا، سيظهر الوصف الفرنسي حتى للزوار الذين اختاروا اللغة العربية.</p>
+</div>
+
+<p id="dashMessage"></p>
+
+<div class="dash-modal-actions">
+<button class="dash-btn dash-btn-ghost" id="cancelProductBtn">Annuler</button>
+<button class="dash-btn dash-btn-primary" id="ajouter">Enregistrer</button>
+</div>
+</div>
+</div>
+
+<!--================ MODALE VILLE (livraison) ================-->
+<div class="dash-modal-overlay" id="cityModalOverlay">
+<div class="dash-modal">
+<h2 id="cityModalTitle">Ajouter une ville</h2>
+
+<div class="dash-field">
+<label for="cityName">Nom de la ville</label>
+<input id="cityName" placeholder="Ex : Marrakech">
+</div>
+<div class="dash-field">
+<label for="cityPrice">Frais de livraison (DH)</label>
+<input id="cityPrice" type="number" placeholder="20">
+</div>
+
+<p id="cityMessage"></p>
+
+<div class="dash-modal-actions">
+<button class="dash-btn dash-btn-ghost" id="cancelCityBtn">Annuler</button>
+<button class="dash-btn dash-btn-primary" id="saveCityBtn">Enregistrer</button>
+</div>
+</div>
+</div>
+
+<!--================ MODALE CODE PROMO ================-->
+<div class="dash-modal-overlay" id="discountModalOverlay">
+<div class="dash-modal">
+<h2>Créer un code de réduction</h2>
+
+<div class="dash-field">
+<label for="discountCodeInput">Code</label>
+<input id="discountCodeInput" placeholder="Ex : SUMMER10" style="text-transform:uppercase;">
+</div>
+<div class="dash-field">
+<label for="discountPercentInput">Réduction (%)</label>
+<input id="discountPercentInput" type="number" min="1" max="100" placeholder="10">
+</div>
+
+<p id="discountMessage"></p>
+
+<div class="dash-modal-actions">
+<button class="dash-btn dash-btn-ghost" id="cancelDiscountBtn">Annuler</button>
+<button class="dash-btn dash-btn-primary" id="saveDiscountBtn">Créer</button>
+</div>
+</div>
+</div>
+
+<script type="module" src="dashboard.js"></script>
+
+<script src="optional-images.js"></script>
+</body>
+</html>
