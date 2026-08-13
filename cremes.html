@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crèmes Naturelles - HERBORISTERIE TOUBA</title>
+<meta name="description" content="Crèmes naturelles hydratantes, anti-âge et apaisantes.">
+<link rel="canonical" href="https://herboristerietouba.github.io/herboristerie-touba/cremes.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crèmes Naturelles - HERBORISTERIE TOUBA">
+<meta property="og:description" content="Crèmes naturelles hydratantes, anti-âge et apaisantes.">
+<meta property="og:url" content="https://herboristerietouba.github.io/herboristerie-touba/cremes.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crèmes Naturelles - HERBORISTERIE TOUBA">
+<meta name="twitter:description" content="Crèmes naturelles hydratantes, anti-âge et apaisantes.">
+<meta name="keywords" content="Herboristerie, Maroc, Huiles, Plantes, Cosmétiques, Naturel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVQWEFY7S4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVQWEFY7S4');
+</script>
+</head>
+<body data-page="produits" data-category="cremes">
+
+<!--================ HEADER ================-->
+<header>
+<div class="container nav">
+<div class="logo">
+<img data-optional-src="logo.png" alt="Logo" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+<span>HERBORISTERIE TOUBA</span>
+</div>
+
+<div class="search-box">
+<svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M10 2a8 8 0 105.29 14.29l4.7 4.7 1.41-1.41-4.7-4.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+</svg>
+<input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+<div class="search-results" id="searchResults"></div>
+</div>
+
+<a href="favoris.html" class="fav-header-btn" aria-label="Favoris"><span>♥</span><span class="fav-count">0</span></a>
+<div class="menu-btn">☰</div>
+</div>
+<div class="lang-bar">
+<div class="container">
+<div class="lang-switcher">
+<button class="lang-switch-btn" data-lang-switch="ar">AR</button>
+<button class="lang-switch-btn" data-lang-switch="fr">FR</button>
+</div>
+</div>
+</div>
+</header>
+
+
+<section class="page-hero">
+<div class="page-banner-slider">
+    <img data-optional-src="banner-natural-care.png" class="banner-slide" alt="" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+    <img data-optional-src="banner-hair-beauty.png" class="banner-slide" alt="" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+    <img data-optional-src="banner-natural-beauty.png" class="banner-slide" alt="" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+    <img data-optional-src="banner-herbal-tradition.png" class="banner-slide" alt="" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+</div>
+<div class="container page-hero-text">
+<h1>🧴 <span data-i18n="cat.cremes.title">🧴 Crèmes Naturelles</span></h1>
+<p>Des crèmes onctueuses et naturelles pour hydrater, apaiser et nourrir votre peau chaque jour.</p>
+<button class="back-btn" onclick="goBack()">← Retour</button>
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Crèmes</div>
+</div>
+</section>
+
+<section>
+    <div class="container">
+        <div id="products-container" class="product-grid"></div>
+    </div>
+</section>
+
+<!--================ FOOTER ================-->
+<footer class="footer">
+
+<div class="footer-brand-bar">
+<img data-optional-src="logo.png" class="footer-logo" alt="HERBORISTERIE TOUBA" onerror="this.style.display='none'; this.setAttribute('aria-hidden','true');">
+<h2 class="footer-title">HERBORISTERIE TOUBA</h2>
+</div>
+
+<div class="footer-container">
+
+<div class="footer-about">
+<p>
+Votre boutique spécialisée en plantes médicinales, huiles naturelles et produits de bien-être.
+Nous sélectionnons des produits de qualité pour vous offrir une expérience naturelle, saine et authentique.
+</p>
+
+<div class="social-icons">
+<a href="https://wa.me/212711088984" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.05 2C6.53 2 2.05 6.48 2.05 12c0 1.76.46 3.4 1.26 4.82L2 22l5.32-1.28A9.94 9.94 0 0012.05 22c5.52 0 10-4.48 10-10S17.57 2 12.05 2zm0 18.2c-1.64 0-3.16-.47-4.44-1.28l-.32-.19-3.16.76.77-3.08-.2-.32A8.15 8.15 0 013.9 12c0-4.5 3.66-8.15 8.15-8.15S20.2 7.5 20.2 12s-3.66 8.2-8.15 8.2z"/></svg>
+</a>
+<a href="https://www.instagram.com/herboristerie_touba?igsh=MXN1Nm16dDQ5aTJ0Mw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.4.56.21.96.47 1.38.89.42.42.68.82.89 1.38.16.42.35 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.4 2.22-.21.56-.47.96-.89 1.38-.42.42-.82.68-1.38.89-.42.16-1.05.35-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.4a3.72 3.72 0 01-1.38-.89 3.72 3.72 0 01-.89-1.38c-.16-.42-.35-1.05-.4-2.22-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.8.4-2.22.21-.56.47-.96.89-1.38.42-.42.82-.68 1.38-.89.42-.16 1.05-.35 2.22-.4C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-1 .04-1.54.21-1.9.35-.48.19-.82.41-1.18.77-.36.36-.58.7-.77 1.18-.14.36-.31.9-.35 1.9-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.04 1 .21 1.54.35 1.9.19.48.41.82.77 1.18.36.36.7.58 1.18.77.36.14.9.31 1.9.35 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1-.04 1.54-.21 1.9-.35.48-.19.82-.41 1.18-.77.36-.36.58-.7.77-1.18.14-.36.31-.9.35-1.9.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-1-.21-1.54-.35-1.9a3.17 3.17 0 00-.77-1.18 3.17 3.17 0 00-1.18-.77c-.36-.14-.9-.31-1.9-.35-1.24-.06-1.6-.07-4.74-.07zm0 4.06a5.94 5.94 0 110 11.88 5.94 5.94 0 010-11.88zm0 1.8a4.14 4.14 0 100 8.28 4.14 4.14 0 000-8.28zm6.18-1.98a1.39 1.39 0 11-2.78 0 1.39 1.39 0 012.78 0z"/></svg>
+</a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Nos Produits</h3>
+<a href="huiles.html">Huiles d'Argan</a>
+<a href="cosmetiques.html">Cosmétiques</a>
+<a href="cremes.html">Crèmes de beauté</a>
+<a href="plantes.html">Plantes Médicinales</a>
+<a href="produits.html">Tous les produits</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Liens Rapides</h3>
+<a href="index.html">Accueil</a>
+<a href="index.html#categories">Catégories</a>
+<a href="produits.html">Produits</a>
+<a href="index.html#reviews">Avis clients</a>
+<a href="apropos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="footer-col">
+<h3 class="footer-heading">Contact Direct</h3>
+<p>📍 Marrakech, Maroc</p>
+<a href="tel:+212711088984">+212 711 088 984</a>
+<a href="mailto:babayarmohamedamine4@gmail.com">babayarmohamedamine4@gmail.com</a>
+<a href="https://wa.me/212711088984" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+
+</div>
+
+<hr>
+<div class="footer-bottom">
+<p>© 2026 HERBORISTERIE TOUBA · Tous droits réservés.</p>
+<a href="https://wa.me/212711088984" target="_blank" rel="noopener noreferrer" class="footer-cta">Nous contacter →</a>
+</div>
+
+</footer>
+
+<!--================ PANIER ================-->
+<a href="panier.html" class="cart">
+🛒
+<div class="cart-count">0</div>
+</a>
+
+<!--================ WHATSAPP ================-->
+<a href="https://wa.me/212711088984" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.05 2C6.53 2 2.05 6.48 2.05 12c0 1.76.46 3.4 1.26 4.82L2 22l5.32-1.28A9.94 9.94 0 0012.05 22c5.52 0 10-4.48 10-10S17.57 2 12.05 2zm0 18.2c-1.64 0-3.16-.47-4.44-1.28l-.32-.19-3.16.76.77-3.08-.2-.32A8.15 8.15 0 013.9 12c0-4.5 3.66-8.15 8.15-8.15S20.2 7.5 20.2 12s-3.66 8.2-8.15 8.2z"/></svg>
+</a>
+
+
+<!--================ TOUBA AI — BOUTON FLOTTANT ================-->
+<button class="touba-ai-btn" data-open-touba-ai aria-label="Touba AI">
+<span class="ai-btn-icon">🌿</span><span data-i18n="nav.touba_ai">Touba AI</span>
+</button>
+
+<!--================ TOUBA AI — PANNEAU DE CHAT ================-->
+<div class="touba-ai-overlay" id="toubaAiOverlay">
+<div class="touba-ai-panel">
+<div class="touba-ai-header">
+<div class="touba-ai-header-title">🌿 <span data-i18n="ai.title">Touba AI</span></div>
+<button class="touba-ai-close" id="toubaAiClose" aria-label="Fermer">✕</button>
+</div>
+<div class="touba-ai-header" style="padding-top:0;padding-bottom:12px;background:#2f4a34;">
+<span class="touba-ai-header-sub" data-i18n="ai.subtitle">Votre assistant intelligent</span>
+</div>
+<div class="touba-ai-messages" id="toubaAiMessages"></div>
+<div class="touba-ai-quick-replies" id="toubaAiQuickReplies">
+<button class="ai-quick-chip" data-ai-category="huiles" data-i18n="ai.quick.hair">Je cherche un produit pour les cheveux</button>
+<button class="ai-quick-chip" data-ai-category="cosmetiques" data-i18n="ai.quick.skin">Produits pour la peau</button>
+<button class="ai-quick-chip" data-ai-category="huiles" data-i18n="ai.quick.oils">Huiles naturelles</button>
+<button class="ai-quick-chip" data-ai-category="plantes" data-i18n="ai.quick.plants">Plantes médicinales</button>
+<button class="ai-quick-chip" data-ai-other data-i18n="ai.quick.other">Autre question</button>
+</div>
+<form class="touba-ai-form" id="toubaAiForm">
+<input type="text" id="toubaAiInput" data-i18n-placeholder="ai.input.placeholder" placeholder="Écrivez votre message..." aria-label="Message pour Touba AI">
+<button type="submit" aria-label="Envoyer">➤</button>
+</form>
+</div>
+</div>
+
+<!--================ RETOUR EN HAUT ================-->
+<a href="#" class="top-btn">⬆️</a>
+
+<div class="menu-overlay" id="overlay"></div>
+
+<div class="side-menu" id="menu">
+<h2>🌿 Menu</h2>
+<a href="index.html"><span class="mi">🏠</span> <span data-i18n="nav.home">Accueil</span></a>
+<a href="index.html#categories"><span class="mi">📂</span> <span data-i18n="nav.categories">Catégories</span></a>
+<a href="produits.html"><span class="mi">🛍</span> <span data-i18n="nav.products">Produits</span></a>
+<a href="panier.html"><span class="mi">🛒</span> <span data-i18n="nav.cart">Panier</span></a>
+<a href="favoris.html"><span class="mi">❤️</span> <span data-i18n="nav.favorites">Favoris</span></a>
+<button type="button" class="side-menu-ai-entry" data-open-touba-ai>
+<span class="side-menu-ai-icon">🌿</span>
+<span class="side-menu-ai-text">
+<span class="side-menu-ai-title"><span data-i18n="nav.touba_ai">Touba AI</span> <span class="side-menu-nav-badge" data-i18n="nav.touba_ai.badge">Nouveau</span></span>
+<span class="side-menu-ai-tagline" data-i18n="nav.touba_ai.tagline">Toujours là pour vous aider</span>
+</span>
+</button>
+<a href="apropos.html"><span class="mi">ℹ️</span> <span data-i18n="nav.about">À propos</span></a>
+<a href="contact.html"><span class="mi">📞</span> <span data-i18n="nav.contact">Contact</span></a>
+<a href="https://wa.me/212711088984"><span class="mi">💬</span> <span data-i18n="nav.whatsapp">WhatsApp</span></a>
+<div class="lang-switcher-menu">
+<button class="lang-switch-btn" data-lang-switch="ar">العربية</button>
+<button class="lang-switch-btn" data-lang-switch="fr">Français</button>
+</div>
+</div>
+<!--================ MENU MOBILE FIXE ================-->
+<nav class="mobile-nav">
+<a href="index.html" class="mn-item" data-page="index"><span class="mn-icon">🏠</span><span data-i18n="nav.home">Accueil</span></a>
+<a href="produits.html" class="mn-item" data-page="produits"><span class="mn-icon">📂</span><span data-i18n="nav.categories">Catégories</span></a>
+<a href="panier.html" class="mn-item" data-page="panier"><span class="mn-icon">🛒</span><span data-i18n="nav.cart">Panier</span><span class="mn-badge cart-count">0</span></a>
+<a href="favoris.html" class="mn-item" data-page="favoris"><span class="mn-icon">❤️</span><span data-i18n="nav.favorites">Favoris</span><span class="mn-badge fav-count">0</span></a>
+<a href="https://wa.me/212711088984" target="_blank" rel="noopener noreferrer" class="mn-item mn-whatsapp"><span class="mn-icon">💬</span><span data-i18n="nav.whatsapp">WhatsApp</span></a>
+<a href="contact.html" class="mn-item" data-page="contact"><span class="mn-icon">📞</span><span data-i18n="nav.contact">Contact</span></a>
+</nav>
+
+<script src="main.js"></script>
+<script type="module" src="products-loader.js"></script>
+<script src="i18n.js"></script>
+<script src="touba-ai.js"></script>
+<script src="optional-images.js"></script>
+</body>
+</html>
